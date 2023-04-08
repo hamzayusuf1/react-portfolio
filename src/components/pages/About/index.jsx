@@ -11,7 +11,7 @@ import ReactLogo from "../../../assets/react.png";
 
 const About = () => {
   return (
-    <div className="h-screen w-full bg-stone-500 about-container">
+    <div className="h-screen w-full bg-stone-500 about-container px-3">
       <div className="max-w-[1000px] mx-auto container flex flex-col justify-center items-center w-full h-full">
         <div className="text-4xl font-semibold mb-4 border-b-4 border-amber-900">
           About

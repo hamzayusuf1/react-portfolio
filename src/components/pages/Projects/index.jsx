@@ -1,10 +1,9 @@
 import { FastAverageColor } from "fast-average-color";
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 
 import weatherApp from "../../../assets/Weather-app.png";
 import "./index.css";
-
-const fac = new FastAverageColor();
+import { PortContext } from "../../../App";
 
 const projects = [
   {
@@ -13,16 +12,22 @@ const projects = [
     url: "/images/Weather-app.png",
     link: "https://www.google.com",
   },
-  { id: 1, url: "/images/image-product-1.jpeg" },
-  { id: 2, url: "/images/Weather-app.png" },
+  {
+    id: 1,
+    url: "/images/todo-app.png",
+    name: "React-Todo-App",
+    link: "https://todo-app1f50.netlify.app/",
+  },
+  { id: 2, url: "/images/image-product-1.jpeg" },
   { id: 3, url: "/images/Weather-app.png" },
 ];
 
 const Projects = () => {
+  const { nav, setNav } = useContext(PortContext);
   return (
-    <div className="bg-stone-500 w-full h-screen">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+    <div className="w-full h-screen">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full overflow-hidden">
+        <div className="pb-8 px-3">
           <p className="text-4xl font-bold border-b-4 border-orange-500">
             Projects
           </p>
@@ -32,10 +37,10 @@ const Projects = () => {
         </div>
 
         {/* Container */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        <div className=" flex flex-col items-center sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-hidden">
           {/* Weather app project */}
           {projects.map((img) => (
-            <div className="img-container">
+            <div className={nav ? "img-container hide" : "img-container"}>
               <img src={img.url} alt="background" />
               <div className="img-overlay">
                 <div className="title">{img.name}</div>

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { PortContext } from "../App";
 
 const Navbar = () => {
   const links = [
@@ -24,14 +25,16 @@ const Navbar = () => {
     },
   ];
 
-  const [nav, setNav] = useState(false);
+  const { nav, setNav } = useContext(PortContext);
 
   return (
     <>
-      <div className="fixed w-full h-[70px] flex justify-between items-center bg-stone-500 text-gray-200">
+      <div className="w-full h-[70px] flex justify-between items-center text-gray-200">
         <div className="flex justify-between w-full">
           <div className="px-5">
-            <h3 className="initials text-3xl">HY</h3>
+            <h3 className="initials text-3xl">
+              <a href="home">HY</a>
+            </h3>
           </div>
 
           {/* Menu */}
