@@ -24,6 +24,18 @@ const projects = [
     name: "Ecommerce Page",
     link: "https://ecommerce-page.onrender.com/",
   },
+  {
+    id: 3,
+    url: "/images/calc-app.png",
+    name: "Calculator App",
+    link: "https://calculator-app-s2yr.onrender.com",
+  },
+  {
+    id: 4,
+    url: "/images/weather-dash.png",
+    name: "Weather Dashboard",
+    link: "https://weather-page.onrender.com",
+  },
 ];
 
 const Projects = () => {
