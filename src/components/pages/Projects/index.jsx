@@ -8,9 +8,9 @@ import { PortContext } from "../../../App";
 const projects = [
   {
     id: 0,
+    url: "/images/weather-dash.png",
     name: "Weather App",
-    url: "/images/Weather-app.png",
-    link: "https://www.google.com",
+    link: "https://weather-page.onrender.com",
   },
   {
     id: 1,
@@ -29,12 +29,6 @@ const projects = [
     url: "/images/calc-app.png",
     name: "Calculator App",
     link: "https://calculator-app-s2yr.onrender.com",
-  },
-  {
-    id: 4,
-    url: "/images/weather-dash.png",
-    name: "Weather Dashboard",
-    link: "https://weather-page.onrender.com",
   },
 ];
 
