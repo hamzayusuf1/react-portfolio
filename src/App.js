@@ -1,5 +1,6 @@
 import Home from "./components/pages/Home";
 import Navbar from "./components/Navbar";
+import { Helmet } from "react-helmet";
 import {
   BrowserRouter as Router,
   Route,
@@ -21,6 +22,11 @@ function App() {
   return (
     <PortContext.Provider value={{ nav, setNav }}>
       <div className="app">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Portfolio</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <Navbar />
         <Routes>
           <Route path="/home" element={<Home />} />

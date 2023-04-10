@@ -18,8 +18,12 @@ const projects = [
     name: "React-Todo-App",
     link: "https://todo-app1f50.netlify.app/",
   },
-  { id: 2, url: "/images/image-product-1.jpeg" },
-  { id: 3, url: "/images/Weather-app.png" },
+  {
+    id: 2,
+    url: "/images/ecommerce-app.png",
+    name: "Ecommerce Page",
+    link: "https://ecommerce-page.onrender.com/",
+  },
 ];
 
 const Projects = () => {
