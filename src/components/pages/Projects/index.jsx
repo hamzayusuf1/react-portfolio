@@ -1,31 +1,35 @@
-import { FastAverageColor } from "fast-average-color";
 import React, { useRef, useContext } from "react";
 
-import weatherApp from "../../../assets/Weather-app.png";
 import "./index.css";
 import { PortContext } from "../../../App";
 
 const projects = [
   {
     id: 0,
+    url: "/images/workout-app.sc.png",
+    name: "MERN Workout App",
+    link: "https://exercisemadesimple.netlify.app/",
+  },
+  {
+    id: 1,
     url: "/images/weather-dash.png",
     name: "Weather App",
     link: "https://weather-page.onrender.com",
   },
   {
-    id: 1,
+    id: 2,
     url: "/images/todo-app.png",
     name: "React-Todo-App",
     link: "https://todo-app1f50.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     url: "/images/ecommerce-app.png",
     name: "Ecommerce Page",
     link: "https://ecommerce-page.onrender.com/",
   },
   {
-    id: 3,
+    id: 4,
     url: "/images/calc-app.png",
     name: "Calculator App",
     link: "https://calculator-app-s2yr.onrender.com",
