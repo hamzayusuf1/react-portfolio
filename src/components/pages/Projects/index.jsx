@@ -6,8 +6,8 @@ import { PortContext } from "../../../App";
 const projects = [
   {
     id: 0,
-    url: "/images/workout-app.sc.png",
-    name: "MERN Workout App",
+    url: "/images/workout-app-sc.png",
+    name: "MERN Workout",
     link: "https://exercisemadesimple.netlify.app/",
   },
   {
