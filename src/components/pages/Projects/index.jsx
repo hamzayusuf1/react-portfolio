@@ -39,13 +39,13 @@ const projects = [
 const Projects = () => {
   const { nav, setNav } = useContext(PortContext);
   return (
-    <div className="w-full h-screen">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full overflow-hidden">
+    <div className="w-full h-full">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full overflow-hidden">
         <div className="pb-8 px-3">
-          <p className="text-4xl font-bold border-b-4 border-orange-500">
+          <p className="text-white text-4xl font-bold border-b-4 border-mainRed">
             Projects
           </p>
-          <p className=" font-semibold py-4">
+          <p className=" font-semibold py-4 text-paraText">
             Feel free to check out some of my previous work
           </p>
         </div>

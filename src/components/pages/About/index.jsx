@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./index.css";
-import Img1 from "../../../assets/profile.png";
+import Img1 from "../../../assets/about-pic.png";
 import HTML from "../../../assets/html.png";
 import CSS from "../../../assets/css.png";
 import Javascript from "../../../assets/javascript.png";
@@ -11,53 +11,68 @@ import ReactLogo from "../../../assets/react.png";
 
 const About = () => {
   return (
-    <div className="h-screen w-full bg-stone-500 about-container px-3">
+    <div className="w-full bg-backgroundBlue about-container px-3 text-white">
       <div className="max-w-[1000px] mx-auto container flex flex-col justify-center items-center w-full h-full">
-        <div className="text-4xl font-semibold mb-4 border-b-4 border-amber-900">
+        <div className="text-4xl font-semibold mb-4 border-b-4 border-mainRed">
           About
         </div>
-        <div className="w-full grid grid-cols-2">
-          <div className="description p-2 flex items-center text-2xl about-description">
-            One of the key reasons I am drawn to code is the ability to simplify
-            the lives of many by creating software application. My passion has
-            driven me to dedicate many hours to grasping new concepts and
-            technologies to improve my skill.
+        <div className="w-full md:grid grid-cols-2 p-3">
+          <div className="description p-2 flex items-center text-2xl about-description text-paraText text-center mb-3">
+            Welcome to my junior software developer portfolio. I'm an emerging
+            software engineer looking to share my journey and the projects I've
+            worked on so far in my career. In this portfolio, you'll find a
+            collection of web and mobile development projects that demonstrate
+            my skills and dedication to honing my craft. Thank you for taking
+            the time to explore my work, and I'm excited to continue learning
+            and growing in the world of software development.
           </div>
-          <div className="mx-auto">
-            <img className="w-100px h-[400px]" src={Img1} alt="" />
+          <div className="flex justify-center">
+            <img className="w-[340px] h-[440px]" src={Img1} alt="" />
           </div>
         </div>
-        <div className="mt-10">
-          <p className="text-4xl font-semibold border-b-4 border-amber-900">
+        <div className="mt-10 p-3">
+          <p className="text-4xl font-semibold border-b-4 border-mainRed">
             Skills
           </p>
           <p className="skills">
             Here are examples of the technologies that I have experience with
           </p>
         </div>
-        <div className="grid grid-flow-col gap-4 text-center">
+        <div className="sm:grid grid-flow-col gap-4 text-center text-2xl">
           <div>
-            <img className="w-24" src={HTML} alt="html.icon" />
+            <img className="w-44 mx-auto md:w-24" src={HTML} alt="html.icon" />
             <p className="my-3">HTML</p>
           </div>
           <div>
-            <img className="w-24" src={CSS} alt="css.icon" />
+            <img className="w-44 mx-auto md:w-24" src={CSS} alt="css.icon" />
             <p className="my-3">CSS</p>
           </div>
           <div>
-            <img className="w-24" src={Javascript} alt="javascript.icon" />
+            <img
+              className="w-44 mx-auto md:w-24"
+              src={Javascript}
+              alt="javascript.icon"
+            />
             <p className="my-3">Javascript</p>
           </div>
           <div>
-            <img className="w-24" src={Node} alt="node.icon" />
+            <img className="w-44 mx-auto md:w-24" src={Node} alt="node.icon" />
             <p className="my-3">Node</p>
           </div>
           <div>
-            <img className="w-24" src={mongoDB} alt="mongoDB.icon" />
+            <img
+              className="w-44 mx-auto md:w-24"
+              src={mongoDB}
+              alt="mongoDB.icon"
+            />
             <p className="my-3">MongoDB</p>
           </div>
           <div>
-            <img className="w-24" src={ReactLogo} alt="react.icon" />
+            <img
+              className="w-44 mx-auto md:w-24"
+              src={ReactLogo}
+              alt="react.icon"
+            />
             <p className="my-3">React</p>
           </div>
         </div>

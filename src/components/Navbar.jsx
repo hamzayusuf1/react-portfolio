@@ -4,6 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { PortContext } from "../App";
+import IMG from "../assets/logo.svg";
 
 const Navbar = () => {
   const links = [
@@ -29,16 +30,18 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-[70px] flex justify-between items-center text-gray-200">
+      <div className="w-full flex justify-between items-center h-fit text-gray-200 bg-backgroundBlue ">
         <div className="flex justify-between w-full">
-          <div className="px-5">
+          <div className="sm:px-5">
             <h3 className="initials text-3xl">
-              <a href="home">HY</a>
+              <a href="/">
+                <img className="w-40" src={IMG} alt="" />
+              </a>
             </h3>
           </div>
 
           {/* Menu */}
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex mt-10">
             {links.map((link) => (
               <li
                 key={link.id}
@@ -52,7 +55,7 @@ const Navbar = () => {
 
         {/* Hamburger menu */}
         <div
-          className="md:hidden z-10 px-4"
+          className="md:hidden z-10 px-4 hover:transform hover:scale-125 hover:cursor-pointer transition-all 0.2s"
           onClick={() => {
             setNav(!nav);
           }}
@@ -66,7 +69,7 @@ const Navbar = () => {
             className={
               !nav
                 ? "hidden"
-                : "absolute top-0 left-0 h-screen w-full bg-stone-700 flex flex-col justify-center items-center"
+                : "absolute top-0 left-0 h-full w-full bg-[#284672] flex flex-col justify-center items-center"
             }
           >
             {links.map((link) => (
@@ -99,7 +102,7 @@ const Navbar = () => {
                 Email <HiOutlineMail size={30} />
               </a>
             </li>
-            <li className="w-[160px] h-[55px] flex ml-[-100px] hover:ml-[-10px] duration-300 bg-orange-300 mb-2 cursor-pointer">
+            <li className="w-[160px] h-[55px] flex ml-[-100px] hover:ml-[-10px] duration-300 bg-mainRed mb-2 cursor-pointer">
               <a
                 className="flex justify-between items-center w-full text-gray-400"
                 href="https://github.com/hamzayusuf1"
@@ -111,7 +114,7 @@ const Navbar = () => {
             <li className="w-[160px] h-[55px] flex ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-200 mb-2 cursor-pointer">
               <a
                 className="flex justify-between items-center w-full text-gray-400"
-                href="https://docs.google.com/document/d/1cUUQWidnBSvS81oYkTjRlFKICRlfx9t6/edit"
+                href="https://docs.google.com/document/d/1Ac-lnC2LEbrH9oXJMZ6OwEDtFrlUtdziEjLw5XOoPsM/edit?usp=sharing"
               >
                 CV <BsFillPersonLinesFill size={30} />
               </a>

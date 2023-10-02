@@ -1,4 +1,3 @@
-import Home from "./components/pages/Home";
 import Navbar from "./components/Navbar";
 import { Helmet } from "react-helmet";
 import {
@@ -6,13 +5,17 @@ import {
   Route,
   Routes,
   Navigate,
+  RouterProvider,
 } from "react-router-dom";
 import { useState, createContext } from "react";
 
+import { router } from "./Layout/Routes";
+
 import "./App.css";
+import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
-import Contact from "./components/pages/Contact";
+import Contact from "./components/pages/Contact/Contact";
 
 export const PortContext = createContext();
 
@@ -27,8 +30,8 @@ function App() {
           <title>My Portfolio</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
-        <Navbar />
-        <Routes>
+
+        {/* <Routes>
           <Route path="/home" element={<Home />} />
           <Route
             exact
@@ -38,7 +41,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes>
+        </Routes> */}
+
+        <RouterProvider router={router}></RouterProvider>
       </div>
     </PortContext.Provider>
   );
